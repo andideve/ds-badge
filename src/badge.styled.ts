@@ -21,22 +21,20 @@ type GetCSSFn<P = any> = (props: P) => CSSObject;
 const styles: (CSSObject | FunctionInterpolation<BadgeProps>)[] = [
   {
     padding: '.25rem .5rem',
+    fontWeight: 'var(--ds-fontWeights-medium)',
   },
   size({
     xs: {
       fontSize: 'var(--ds-fontSizes-xs)',
       lineHeight: 'var(--ds-lineHeights-4)',
-      fontWeight: 'var(--ds-fontWeights-semibold)',
     },
     sm: {
       fontSize: 'var(--ds-fontSizes-sm)',
       lineHeight: 'var(--ds-lineHeights-5)',
-      fontWeight: 'var(--ds-fontWeights-semibold)',
     },
     base: {
       fontSize: 'var(--ds-fontSizes-base)',
       lineHeight: 'var(--ds-lineHeights-6)',
-      fontWeight: 'var(--ds-fontWeights-semibold)',
     },
   }),
   variant({
@@ -53,7 +51,7 @@ const styles: (CSSObject | FunctionInterpolation<BadgeProps>)[] = [
     outlined: {
       color: 'var(--ds-colors-foreground-primary)',
       backgroundColor: 'transparent',
-      boxShadow: 'inset 0 0 0 0.125rem var(--ds-colors-separator-default)',
+      boxShadow: 'inset 0 0 0 1px var(--ds-colors-separator-default)',
     },
   }),
   system<SystemProps>({
